@@ -6,16 +6,16 @@ $(function() {
         butsend.on('click',function(){
             var check = true;
             for(var i=0; i<input.length; i++) {
-                if(validate(input[i]) === false){
+                if(validate(input[i]) == false){
                     showValidate(input[i]);
                     check=false;
                 }
             }
             // Отправка формы
-            if (check === true) {
+            if (check == true) {
                 $.post("bdfyjd27@yandex.ru", $frm.find(".form-at select, .form-at input, .form-at textarea").serialize(),
                     function(data){
-                        if(data.frm_check === 'error'){
+                        if(data.frm_check == 'error'){
                             $frm.find(".result-at").html("<div class='error-at'>Ошибка: " + data.msg + "</div>");
                         } else {
                             $frm.find(".result-at").html("<div class='success-at'>Ваше сообщение отправлено!</div>");
@@ -42,7 +42,7 @@ $(function() {
             }
             }
         */
-        if($(input).val().trim() === ''){
+        if($(input).val().trim() == ''){
             return false;
         }
     }
