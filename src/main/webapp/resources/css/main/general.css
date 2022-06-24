@@ -1,0 +1,31 @@
+#text1 {
+    font-family: "Arial Black", cursive;
+    font-weight: 900;
+    font-stretch: expanded;
+    font-size: xx-large;
+    color: black;
+}
+
+.aboutus {
+    color: #0a58ca;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f9f9fd;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+
+footer {
+    border: 0 solid #337AB7;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    overflow-x: hidden;
+}

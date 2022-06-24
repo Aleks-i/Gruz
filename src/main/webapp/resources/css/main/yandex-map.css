@@ -1,0 +1,92 @@
+/* Контейнер для карты */
+.map-container {
+    /*border: 8px solid #337AB7;*/
+    /*margin: 20px 0;*/
+    /*box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);*/
+    height: 355px;
+}
+
+ /*Ставим фильтры для самой карты*/
+.map-container .ymaps-2-1-79-ground-pane {
+    filter: brightness(0.8) contrast(1.5) saturate(2);
+}
+
+/* Убираем лишнии кнопки и ползунок масштаба */
+.map-container .ymaps-2-1-79-controls__toolbar_right,
+.map-container .ymaps-2-1-79-controls__toolbar_left,
+.map-container .ymaps-2-1-79-zoom__scale {
+    display: none;
+}
+
+/* Оформляем кнопки плюс и минус */
+.map-container .ymaps-2-1-79-float-button {
+    border-color: #337AB7;
+    background-color: #337AB7;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.1);
+}
+.map-container .ymaps-2-1-79-float-button-icon {
+    border: 0;
+    width: 22px;
+    height: 22px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+.map-container .ymaps-2-1-79-float-button:hover .ymaps-2-1-79-float-button-icon {
+    opacity: 1;
+}
+.map-container .ymaps-2-1-79-zoom {
+    transform: scale(1.5);
+    height: 10px!important;
+}
+.map-container .ymaps-2-1-79-controls__control {
+    inset: 36px auto auto 30px!important;
+}
+.map-container .ymaps-2-1-79-zoom__plus .ymaps-2-1-79-zoom__icon {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M11 15H6v-4h5V6h4v5h5v4h-5v5h-4v-5zm0 0'/%3e%3c/svg%3e");
+    background-size: 16px 16px;
+}
+.map-container .ymaps-2-1-79-zoom__minus .ymaps-2-1-79-zoom__icon {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M6 11h14v4H6z'/%3e%3c/svg%3e");
+    background-size: 16px 16px;
+}
+
+/* Оформляем балун */
+.map-container .ymaps-2-1-79-balloon__content {
+    font: 15px/24px Arial,sans-serif;
+    color: #FFF;
+    padding: 8px 8px 8px 16px;
+}
+.map-container .ymaps-2-1-79-balloon__layout,
+.map-container .ymaps-2-1-79-balloon__content,
+.map-container .ymaps-2-1-79-balloon__tail::after {
+    background: #337AB7;
+}
+.map-container .ymaps-2-1-79-balloon__close-button {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M14 .7l-.7-.7L7 6.3.7 0 0 .7 6.3 7 0 13.3l.7.7L7 7.7l6.3 6.3.7-.7L7.7 7z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    opacity: 1;
+    height: 30px;
+}
+.map-container .ymaps-2-1-79-islets_icon-caption {
+    background: #337AB7;
+    font: 16px/24px Arial,sans-serif;
+    color: #FFF;
+    padding: 2px 16px 0 30px;
+}
+
+/* Оформляем нижнюю строку */
+.map-container .map-info {
+    display: flex;
+    background: #337AB7;
+    color: #FFF;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font: 16px/24px Arial,sans-serif;
+}
+.map-container .map-info div {
+    padding: 10px 12px 4px;
+}
+.map-container .map-info a {
+    color: #FFF;
+    text-decoration: none;
+    padding-left: 6px;
+}
