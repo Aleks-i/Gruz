@@ -29,3 +29,11 @@ footer {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
     overflow-x: hidden;
 }
+
+.text-shadow-2 {
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+.text-shadow-1 {
+    text-shadow: 1px 1px 1px #aaa;
+}
